@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: vns1lgc45-dotnet-basic-gitops
+  description: This is GitOps manifest for vns1lgc45-dotnet-basic   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: vns1lgc45-dotnet-basic
+    janus-idp.io/tekton: vns1lgc45-dotnet-basic 
+    backstage.io/kubernetes-id: vns1lgc45-dotnet-basic 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:vns1lgc45-dotnet-basic
